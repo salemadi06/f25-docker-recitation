@@ -29,8 +29,38 @@ def get_team_info(team_id: str):
     if team_id == "1":
         return {
             "team_id" : team_id,
-            "team_name": "<name of team 1>",
+            "team_name": "Nodegpt",
             "mentor": "Seckhen"
+        }
+    elif team_id == "2":
+        return {
+            "team_id" : team_id,
+            "team_name": "bitwise",
+            "mentor": "Aadi"
+        }
+    elif team_id == "3":
+        return {
+            "team_id" : team_id,
+            "team_name": "Gituardo",
+            "mentor": "Steve"
+        }
+    elif team_id == "4":
+        return {
+            "team_id" : team_id,
+            "team_name": "sickfault",
+            "mentor": "Seckhen"
+        }
+    elif team_id == "5":
+        return {
+            "team_id" : team_id,
+            "team_name": "Debug Divas",
+            "mentor": "Aadi"
+        }
+    elif team_id == "6":
+        return {
+            "team_id" : team_id,
+            "team_name": "codex",
+            "mentor": "Steve"
         }
     else:
         raise HTTPException(status_code=404, detail="Invalid team id")

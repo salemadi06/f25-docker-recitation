@@ -5,3 +5,12 @@ FROM python:3.9
 WORKDIR /code
 
 # TODO
+COPY ./requirements.txt /code/requirements.txt
+
+RUN pip install -r /code/requirements.txt
+
+# copy the rest of the application code
+COPY ./app /code/app
+
+# specify the command to run the app inside the container
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
